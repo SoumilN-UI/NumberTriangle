@@ -88,7 +88,6 @@ public class NumberTriangle {
      *
      */
     public int retrieve(String path) {
-        // TODO implement this method
         NumberTriangle curr = this;
         for (char c: path.toCharArray()) {
             if (c == 'l') {
