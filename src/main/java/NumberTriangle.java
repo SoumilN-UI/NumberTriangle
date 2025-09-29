@@ -89,7 +89,19 @@ public class NumberTriangle {
      */
     public int retrieve(String path) {
         // TODO implement this method
-        return -1;
+        NumberTriangle curr = this;
+        for (char c: path.toCharArray()) {
+            if (c == 'l') {
+                curr = curr.left;
+            }
+            else if (c == 'r') {
+                curr = curr.right;
+            }
+            else {
+                throw new IllegalArgumentException("Illegal character in path");
+            }
+        }
+        return curr.root;
     }
 
     /** Read in the NumberTriangle structure from a file.
